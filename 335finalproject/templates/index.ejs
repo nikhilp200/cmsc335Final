@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Joke Machine</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+	<div class="hero">
+		<h1>Generate jokes.</h1>
+		<p id="cohereHeader">Powered by Cohere.</p>
+	</div>
+	
+	<form action="/joke" method="POST">
+		<label for="email">Email (Optional, for Chat History): </label>
+		<input type="email" id="email" name="email">
+		<br><br>
+		<label for="jokeType">Joke Type (Optional): </label>
+        <input type="text" id="jokeType" name="jokeType">
+		<br><br>
+        <button type="submit">Generate Joke</button>
+        <br>
+	</form>
+    <hr>
+
+	<div class="display">
+		<%- jokeBody %>
+	</div>
+</body>
+
+</html>
